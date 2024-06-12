@@ -7,12 +7,12 @@ def principal():
     if upload is not None:
         transcrever(upload)
 
-def trascrever(upload):
+def transcrever(upload):
     recognizer = sr.Recognizer()
     with sr.AudioFile(upload) as source:
         st.write("Processando...")
         audio = recognizer.record(source)
         texto = recognizer.recognize_google(audio,language="pt-BR")
-        sr.Write("Texto: ",texto)
+        st.write("Texto: ",texto)
 
 principal()
