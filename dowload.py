@@ -5,7 +5,7 @@ def principal():
     st.title("Transcrição de audio: ")
     upload = st.file_uploader("Faça upload do arquivo de audio", type = ["wav"])
     if upload is not None:
-        transcrever{upload}
+        transcrever(upload)
 
 def trascrever(upload):
     recognizer = sr.Recognizer()
